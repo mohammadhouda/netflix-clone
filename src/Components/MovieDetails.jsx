@@ -22,8 +22,6 @@ function MovieDetails() {
       const user = auth.currentUser;
       if (!user) throw new Error("User not logged in");
 
-      console.log(user);
-
       const watchlistRef = ref(database, `watchlists/${user.uid}/${movie.id}`);
 
       await set(watchlistRef, movie);
