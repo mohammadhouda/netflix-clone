@@ -19,12 +19,8 @@ const firebaseConfig = {
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
 };
 
-console.log("Database URL:", process.env.REACT_APP_FIREBASE_DATABASE_URL);
-
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-console.log("Firebase Config:", firebaseConfig);
-console.log("Database initialized:", database);
 
 export const auth = getAuth(app);
 export { database, ref, set, push, onValue, remove };
